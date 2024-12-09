@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Us Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+      /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h2.section-title {
+    text-align: center;
+    font-size: 20px;
+    color: #ff523b;
+    margin-top: 40px;
+}
+
+h3.section-subtitle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Individual Card */
+.card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    flex: 1 1 calc(33.33% - 20px); /* Three cards per row by default */
+    transition: transform 0.3s ease;
+    max-width: 300px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* Full-width for smaller screens */
+    }
+
+    h3.section-subtitle {
+        font-size: 20px;
+    }
+
+    h2.section-title {
+        font-size: 18px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <section class="why-us">
+        <h2 class="section-title">WHY US</h2>
+        <h3 class="section-subtitle">What sets us apart from the crowd?</h3>
+        <div class="cards-container">
+            <div class="card">
+                <img src="bg2.jpg" alt="Trial Center Icon">
+                <h4>Trial Center</h4>
+                <p>As the only government-certified Official Trial Center in the Mechi zone, we are proud to be the biggest and best driving school in the country.</p>
+            </div>
+            <div class="card">
+                <img src="images/international-standards-icon.png" alt="International Standards Icon">
+                <h4>International Standard</h4>
+                <p>Rest assured, our driving institute is fully aligned with international standards, guaranteeing No. 1 quality and adherence to best practices in education and training.</p>
+            </div>
+            <div class="card">
+                <img src="images/flexible-timing-icon.png" alt="Flexible Timing Icon">
+                <h4>Flexible Timing</h4>
+                <p>Convenience meets flexibility at our driving school, where we offer lessons from dawn till dusk (5:30 a.m.–7:00 p.m.), <strong>Seven days a week</strong>.</p>
+            </div>
+            <div class="card">
+                <img src="images/experienced-instructors-icon.png" alt="Experienced Instructors Icon">
+                <h4>Experienced Instructors</h4>
+                <p>Learn from the best at our driving school, where experienced instructors with years of teaching expertise are dedicated to your success.</p>
+            </div>
+            <div class="card">
+                <img src="images/comprehensive-classes-icon.png" alt="Comprehensive Classes Icon">
+                <h4>Comprehensive Classes</h4>
+                <p>We offer comprehensive driving classes, where theory meets practical training, equipping you with the skills to confidently navigate any road situation.</p>
+            </div>
+            <div class="card">
+                <img src="images/diverse-options-icon.png" alt="Diverse Course Options Icon">
+                <h4>Diverse Course Options</h4>
+                <p>Whether you're looking for a quick refresher course (hourly/weekly) or a comprehensive trial guarantee program, we offer diverse services to accommodate every learner.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
