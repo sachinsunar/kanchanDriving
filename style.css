@@ -199,6 +199,8 @@ a {
 .facilities-col p{
     padding: 0;
     margin-left: 31px;
+    margin-right: 45px;
+    text-align: justify;
 }
 
 .facilities-col h3{
@@ -277,6 +279,7 @@ a {
   font-size: 14px; /* Increased for better readability */
   margin: 12px 0;
   color: #777;
+  text-align: justify;
 }
 
 .testimonial .col-3 h3 {
@@ -543,7 +546,14 @@ small{
   .footer-col-2 img{
     width: 180px;
   }
+  .contact-col div h5 h5{
+    font-size: 12px;
+  }
 
+  .contact-col div p{
+font-size: 10px;
+  }
+ 
 }
 
 .btn{
@@ -845,6 +855,15 @@ margin-right: 5px;
   .footer-col-2 img{
     width: 180px;
   }
+  .faq h3 {
+    font-size: 0.8rem;
+  }
+  .text-box h1 {
+    font-size: 22px;
+}
+.contact-col div h5 {
+  font-size: 14px;
+}
 }
 
 /* Responsive Design: Mobile (480px and below) */
@@ -866,6 +885,15 @@ margin-right: 5px;
   .card img {
       height: 150px; /* Adjust image height for smaller screens */
   }
+  .faq h3 {
+    font-size: 0.8rem;
+  }
+  .text-box h1 {
+    font-size: 22px;
+}
+.contact-col div h5 {
+  font-size: 14px;
+}
 }
 
 
@@ -917,7 +945,7 @@ margin-right: 5px;
   text-align:center;
 }
 .footer-col-2 img{
-  width: 180px;
+  width: 300px;
   margin-bottom: 2px;
   opacity: 80%;
 }
@@ -952,5 +980,225 @@ ul{
 }
 
 
+.driving-test-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  margin-left: 50px;
+}
 
+.content {
+  max-width: 50%;
+}
 
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.request-form {
+  display: flex;
+  gap: 10px;
+}
+
+.request-form input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.request-form button {
+  padding: 10px 20px;
+  background-color: #911007;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.request-form button:hover {
+  background-color: #f44336;
+}
+
+.image {
+  max-width: 40%;
+}
+
+.image img {
+  max-width: 95%;
+  border-radius: 0px 10px 10px 0px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .driving-test-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .image {
+    max-width: 70%;
+  }
+
+  .image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .driving-test-section {
+    padding: 20px;
+  }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  .request-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .request-form input,
+  .request-form button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 0.8rem;
+  }
+
+  .request-form {
+    gap: 10px;
+  }
+
+  .request-form input,
+  .request-form button {
+    font-size: 0.9rem;
+  }
+
+  .image img {
+    border-radius: 0;
+  }
+}
+
+/* Header Styling */
+.gallery-header {
+  background-color: #f9f9f9;
+  padding: 20px 10px;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Album Container */
+.albums-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto;
+}
+
+.album {
+  text-align: center;
+  cursor: pointer;
+}
+
+.album img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.album h3 {
+  margin-top: 10px;
+}
+
+/* Photos Container */
+.photos-container {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Back Button */
+.back-button {
+  background-color: #911007;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #f44336;
+}
+
+/* Footer */
+.gallery-footer {
+  text-align: center;
+  background-color: #911007;
+  color: #fff;
+  padding: 10px;
+}

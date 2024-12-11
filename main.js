@@ -52,3 +52,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
             
     });
+
+
+    // Initialize EmailJS
+   
+  
+      // Handle form submission
+      document.getElementById("requestForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+  
+        // Collect form data
+        const formData = {
+          user_phone: this.user_phone.value
+        };
+  
+        // Send the email using EmailJS
+        emailjs.send("service_n24n7ih", "template_cq3ba2s", formData)
+          .then(function(response) {
+            alert("Request sent successfully! We'll get back to you shortly.");
+            console.log("Success!", response.status, response.text);
+          })
+          .catch(function(error) {
+            alert("There was an error sending your request. Please try again.");
+            console.error("EmailJS Error:", error);
+          });
+  
+        // Reset the form
+        this.reset();
+      });
