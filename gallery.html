@@ -71,6 +71,11 @@ family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
     
       <!-- Album Container -->
       <main id="albums-view" class="albums-container">
+       
+        <div class="album" data-album="students2">
+          <img src="images/IMG-20241211-WA0044.jpg" alt="Students Album">
+          <h3>Passed-Out Students</h3>
+        </div>
         <div class="album" data-album="students">
           <img src="images/student1.jpg" alt="Students Album">
           <h3>Passed-Out Students</h3>
@@ -86,8 +91,8 @@ family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
       <main id="photos-view" class="photos-container hidden">
         <button id="back-to-albums" class="back-button">← Back to Albums</button>
         <div class="gallery-grid" id="photo-gallery">
-          <!-- Photos will be dynamically inserted here -->
         </div>
+        <button id="back-to-album" class="back-button">← Back to Albums</button>
       </main>
     
     
@@ -124,7 +129,7 @@ family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
             </div>
         </div>
         <hr>
-        <p class="copyright">© 2024 Kanchan Motor Driving Center | All Rights Reserved | Design and Developed By Monk Tech</p>
+        <p class="copyright">© 2024 Kanchan Motor Driving Center | All Rights Reserved | Design and Developed By <a href="https://www.sachinsunar.com.np/">Sachin Sunar</a></p>
     </div>
 </div>
 
@@ -135,36 +140,118 @@ family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
   const photosView = document.getElementById("photos-view");
   const photoGallery = document.getElementById("photo-gallery");
   const backToAlbums = document.getElementById("back-to-albums");
+  const backToAlbums2 = document.getElementById("back-to-album");
 
   const albumsData = {
     students: [
       "images/student1.jpg",
       "images/student2.jpg",
       "images/student3.jpg",
-      "images/student4.jpg",
-      "images/student4.jpg",
-      "images/student5.jpg",
-      "images/student6.jpg",
-      "images/student7.jpg",
-      "images/student8.jpg",
-      "images/student9.jpg",
-      "images/student10.jpg",
-      "images/student11.jpg",
-      "images/student12.jpg",
-      "images/student13.jpg",
-      "images/student14.jpg",
-      "images/student15.jpg",
-      "images/student16.jpg",
-      "images/student18.jpg",
-      "images/student19.jpg",
-      "images/student20.jpg",
-      "images/student21.jpg",
-      "images/student22.jpg",
-      "images/student23.jpg",
-      "images/student24.jpg",
-      "images/student25.jpg",
+      "images/IMG-20241211-WA0073.jpg",
+      "images/IMG-20241211-WA0074.jpg",
+      "images/IMG-20241211-WA0075.jpg",
+      "images/IMG-20241211-WA0076.jpg",
+      "images/IMG-20241211-WA0077.jpg",
+      "images/IMG-20241211-WA0078.jpg",
+      "images/IMG-20241211-WA0079.jpg",
+      "images/IMG-20241211-WA0080.jpg",
+      "images/IMG-20241211-WA0081.jpg",
+      "images/IMG-20241211-WA0082.jpg",
+      "images/IMG-20241211-WA0083.jpg",
+      "images/IMG-20241211-WA0084.jpg",
+      "images/IMG-20241211-WA0085.jpg",
+      "images/IMG-20241211-WA0086.jpg",
+      "images/IMG-20241211-WA0087.jpg",
+      "images/IMG-20241211-WA0088.jpg",
+      "images/IMG-20241211-WA0089.jpg",
+      "images/IMG-20241211-WA0090.jpg",
+      "images/IMG-20241211-WA0091.jpg",
+      "images/IMG-20241211-WA0092.jpg",
+      "images/IMG-20241211-WA0093.jpg",
+      "images/IMG-20241211-WA0094.jpg",
+      "images/IMG-20241211-WA0095.jpg",
+      "images/IMG-20241211-WA0096.jpg",
+      "images/IMG-20241211-WA0097.jpg",
+      "images/IMG-20241211-WA0098.jpg",
+      "images/IMG-20241211-WA0099.jpg",
+      "images/IMG-20241211-WA0100.jpg",
+      "images/IMG-20241211-WA0101.jpg",
+      "images/IMG-20241211-WA0102.jpg",
+      "images/IMG-20241211-WA0103.jpg",
+      "images/IMG-20241211-WA0104.jpg",
+      "images/IMG-20241211-WA0105.jpg",
+      "images/IMG-20241211-WA0106.jpg",
+      "images/IMG-20241211-WA0107.jpg",
+      "images/IMG-20241211-WA0108.jpg",
+      "images/IMG-20241211-WA0109.jpg",
+      "images/IMG-20241211-WA0110.jpg",
+      "images/IMG-20241211-WA0111.jpg",
+      "images/IMG-20241211-WA0111.jpg",
+      "images/IMG-20241211-WA0112.jpg",
+      "images/IMG-20241211-WA0113.jpg",
+      "images/IMG-20241211-WA0114.jpg",
+      "images/IMG-20241211-WA0115.jpg",
+      "images/IMG-20241211-WA0116.jpg",
+      "images/IMG-20241211-WA0117.jpg",
+      "images/IMG-20241211-WA0118.jpg",
+      "images/IMG-20241211-WA0119.jpg",
+      "images/IMG-20241211-WA0120.jpg",
+      "images/IMG-20241211-WA0121.jpg",
+   
+      
+     
+     
       
     ],
+    students2: [
+      "images/IMG-20241211-WA0044.jpg",
+      "images/IMG-20241211-WA0045.jpg",
+      "images/IMG-20241211-WA0046.jpg",
+      "images/IMG-20241211-WA0047.jpg",
+      "images/IMG-20241211-WA0048.jpg",
+      "images/IMG-20241211-WA0049.jpg",
+      "images/IMG-20241211-WA0050.jpg",
+      "images/IMG-20241211-WA0051.jpg",
+      "images/IMG-20241211-WA0052.jpg",
+      "images/IMG-20241211-WA0053.jpg",
+      "images/IMG-20241211-WA0054.jpg",
+      "images/IMG-20241211-WA0055.jpg",
+      "images/IMG-20241211-WA0056.jpg",
+      "images/IMG-20241211-WA0057.jpg",
+      "images/IMG-20241211-WA0058.jpg",
+      "images/IMG-20241211-WA0059.jpg",
+      "images/IMG-20241211-WA0060.jpg",
+      "images/IMG-20241211-WA0061.jpg",
+      "images/IMG-20241211-WA0062.jpg",
+      "images/IMG-20241211-WA0063.jpg",
+      "images/IMG-20241211-WA0064.jpg",
+      "images/IMG-20241211-WA0065.jpg",
+      "images/IMG-20241211-WA0066.jpg",
+      "images/IMG-20241211-WA0067.jpg",
+      "images/IMG-20241211-WA0068.jpg",
+      "images/IMG-20241211-WA0069.jpg",
+      "images/IMG-20241211-WA0070.jpg",
+      "images/IMG-20241211-WA0071.jpg",
+      "images/IMG-20241211-WA0072.jpg",
+      "images/IMG-20241211-WA0122.jpg",
+      "images/IMG-20241211-WA0123.jpg",
+      "images/IMG-20241211-WA0124.jpg",
+      "images/IMG-20241211-WA0125.jpg",
+      "images/IMG-20241211-WA0126.jpg",
+      "images/IMG-20241211-WA0127.jpg",
+      "images/IMG-20241211-WA0128.jpg",
+      "images/IMG-20241211-WA0129.jpg",
+      "images/IMG-20241211-WA0131.jpg",
+      "images/IMG-20241211-WA0132.jpg",
+      "images/IMG-20241211-WA0133.jpg",
+      "images/IMG-20241211-WA0134.jpg",
+      "images/IMG-20241211-WA0135.jpg",
+      "images/IMG-20241211-WA0136.jpg",
+      "images/IMG-20241211-WA0137.jpg",
+      "images/IMG-20241211-WA0138.jpg",
+      "images/IMG-20241211-WA0139.jpg",     
+    ],
+ 
     institute: [
       "images/student1.jpg",
       "images/student2.jpg",
@@ -198,6 +285,10 @@ family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
 
   // Back to albums
   backToAlbums.addEventListener("click", () => {
+    photosView.classList.add("hidden");
+    albumsView.classList.remove("hidden");
+  });
+  backToAlbums2.addEventListener("click", () => {
     photosView.classList.add("hidden");
     albumsView.classList.remove("hidden");
   });

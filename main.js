@@ -80,3 +80,41 @@ document.addEventListener("DOMContentLoaded", () => {
         // Reset the form
         this.reset();
       });
+
+
+      
+
+  // Function to animate the count
+  function animateCount(id, start, end, duration) {
+    let element = document.getElementById(id);
+    let range = end - start;
+    let increment = end > start ? 1 : -1;
+    let stepTime = Math.abs(Math.floor(duration / range));
+    let current = start;
+    let timer = setInterval(() => {
+      current += increment;
+      element.textContent = current;
+      if (current === end) {
+        clearInterval(timer);
+      }
+    }, stepTime);
+  }
+
+  // Observe when the section comes into view
+  document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector(".driving-test-section");
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Trigger animations only once
+          animateCount("students-count", 4789, 5000, 2000); // Animate 5000+
+          animateCount("pass-rate", 0, 96, 1500); // Animate 96%
+          observer.disconnect(); // Stop observing after the animation runs
+        }
+      });
+    }, { threshold: 0.5 }); // Adjust the threshold if needed
+
+    observer.observe(section);
+  });
+
+
