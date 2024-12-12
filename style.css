@@ -927,6 +927,9 @@ margin-right: 5px;
 .footer p{
   color: #8a8a8a;
 }
+.footer p a{
+  color: #8a8a8a;
+}
 .footer h3{
   color: #fff;
   margin-bottom:20px;
