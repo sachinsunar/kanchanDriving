@@ -188,12 +188,14 @@ a {
     margin-bottom: 5%;
     text-align: left;
     transition: transform 0.5s;
+  
 }
 .facilities-col img {
     width: 80%;
     border-radius: 10px;
     margin-left: 31px;
-    
+    height: 400px;
+    object-fit: cover;  
 }
 
 .facilities-col p{
