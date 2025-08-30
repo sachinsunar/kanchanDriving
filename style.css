@@ -194,8 +194,8 @@ a {
     width: 80%;
     border-radius: 10px;
     margin-left: 31px;
-    height: 400px;
-    object-fit: cover;  
+    height: 500px;
+    object-fit: cover; 
 }
 
 .facilities-col p{
